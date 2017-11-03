@@ -16,5 +16,7 @@ This project use Angular4 combine with Google-geolocation API and Darksky API fo
 
 ** This problem caused by the website that enable CORS in this project broke. (https://cors-anywhere.herokuapp.com/)   **
 
+Anyway, this is link to my project : https://drifterz13.github.io/Angular-singlepage/
+
 ![image](https://user-images.githubusercontent.com/32530608/32362128-704e6656-c099-11e7-8cc7-db7449e159cc.png)
 
