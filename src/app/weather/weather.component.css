@@ -1,0 +1,96 @@
+body {
+  background: #333;
+  /*color: #f7f9f9;*/
+  font-family: 'Arimo', sans-serif;
+}
+
+#title {
+  animation: type 1.0s steps(16), blink 0.8s infinite alternate;
+  overflow: hidden;
+  white-space: nowrap;
+  color: beige;
+  font-family: 'Noto Sans', sans-serif;
+  border-right: 4px solid beige;
+  width: 16ch;
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 16ch;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: beige;
+  }
+}
+
+#home-section {
+  background: url('../../assets/images/mountain.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  background-attachment: fixed;
+}
+
+.dark-overlay {
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+}
+
+.home-inner {
+  padding-top: 100px;
+}
+
+#weatherContents {
+  color: antiquewhite;
+}
+#temp {
+  color: coral;
+}
+.wi {
+  color: aliceblue;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid coral;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 767px) {
+    #title {
+        font-size: 54px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #title {
+        font-size: 60px;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    #title {
+        font-size: 66px;
+    }
+}

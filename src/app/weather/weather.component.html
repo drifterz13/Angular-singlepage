@@ -1,0 +1,39 @@
+<header id="home-section">
+  <div class="dark-overlay">
+    <div class="home-inner">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <h1 class="display-3 lead text-center" id="title">Weather Forecast.</h1>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8">
+            <div class="input-group">
+              <input type="text" class="form-control" [(ngModel)]='searchQuery' placeholder="Insert Location">
+              <span class="input-group-btn">
+                <button class="btn btn-outline-warning" (click)='searchLocation(searchQuery)'>Search</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5" id="weatherContents">
+          <div class="col-lg-6 col-md-8">
+            <!-- <h3 class="text-center m-4" *ngIf='searching;else other_content'>Searching ..</h3> -->
+            <div class="loader d-flex justify-content-center m-auto" *ngIf='searching;else other_content'> </div>
+
+            <ng-template #other_content>
+            <div class="text-center">
+                <h1 class="display-3 lead text-center p-3" id="temp">
+                  {{temp | number : '1.1-1'}}{{celcius}} <i class="{{icons}}"></i>
+                </h1>
+              <p class="pt-2">{{location}}</p>
+              <p>{{weather}}</p>
+            </div>
+          </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
